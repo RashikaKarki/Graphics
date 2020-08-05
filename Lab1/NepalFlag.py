@@ -2,22 +2,33 @@ from graphics import *
 from time import sleep
 from math import sqrt,sin,cos, pi
 from sympy import symbols, Eq, solve
-from Arc import Arc
 
 win = GraphWin('Face', 500, 500)
 
 def drawmoon():
+
     #Drawing moon 
-    arc = Arc(Point(210, 190), Point(245, 220), -180)
-    arc.setOutline('white')
-    arc.setFill('white')
-    arc.draw(win)
+    #White -> lower half
+    circle = Circle(Point(227, 205), 14)
+    circle.setFill('white')
+    circle.setOutline('white')
+    circle.draw(win)
+    #Red -> upper half
+    circle = Circle(Point(227, 200), 13)
+    circle.setFill('red')
+    circle.setOutline('red')
+    circle.draw(win)
+    
+    # arc = Arc(Point(210, 190), Point(245, 220), -180)
+    # arc.setOutline('white')
+    # arc.setFill('white')
+    # arc.draw(win)
 
     #Drawing waves from moon
-    r1 = 8
-    r2 = 12
+    r1 = 7
+    r2 = 10
     cx = 227
-    cy = 205
+    cy = 208
 
     triangle_vertices = []
     degree = 0
@@ -41,7 +52,7 @@ def drawmoon():
             triangle.draw(win)
             triangle_vertices= [triangle_vertices[2]]
 
-    circle = Circle(Point(227, 205), 8)
+    circle = Circle(Point(227, 208), 7)
     circle.setFill('white')
     circle.setOutline('white')
     circle.draw(win)
