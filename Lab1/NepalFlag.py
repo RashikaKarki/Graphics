@@ -18,11 +18,6 @@ def drawmoon():
     circle.setFill('red')
     circle.setOutline('red')
     circle.draw(win)
-    
-    # arc = Arc(Point(210, 190), Point(245, 220), -180)
-    # arc.setOutline('white')
-    # arc.setFill('white')
-    # arc.draw(win)
 
     #Drawing waves from moon
     r1 = 7
